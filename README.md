@@ -6,3 +6,14 @@ This script will take a list of domains and test their HTTP responses. The URLs 
 
 Run with the following:
 python3 statuscheck.py -l subdomains.txt
+
+
+First version did not include multithreading. I ran version 1 over a list of 4200 subdomains and it took with the folllwing results:
+real	61m12.330s
+user	5m22.513s
+sys	1m7.630s
+
+After implementing this multithreading method I see a HUGE improvement:
+real	7m15.777s
+user	8m26.937s
+sys	4m40.548s
