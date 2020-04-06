@@ -1,7 +1,7 @@
 import os
 import requests
 import argparse
-import future
+import concurrent.futures
 
 
 parser = argparse.ArgumentParser()
