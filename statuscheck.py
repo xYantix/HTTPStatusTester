@@ -5,7 +5,7 @@ import concurrent.futures
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-list', '-l', required=True, help='Enter path for domain/subdomain list')
+parser.add_argument('-list', '-l', required=True, help='Enter path for domain/s$
 #Can add additional args later - custom headers
 
 args = parser.parse_args()
@@ -25,13 +25,11 @@ def statuscheck(url):
         pass
 
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
-    checks = {executor.submit(statuscheck, url): for url in urls}
+with concurrent.futures.ThreadPoolExecutor(max_workers=30) as executor:
+    checks = {executor.submit(statuscheck, url): url for url in urls}
     for future in concurrent.futures.as_completed(checks):
         url = checks[future]
         try:
             data = future.result()
         except Exception as exc:
             pass
-
-
