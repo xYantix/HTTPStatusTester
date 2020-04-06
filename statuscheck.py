@@ -5,7 +5,7 @@ import concurrent.futures
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-list', '-l', required=True, help='Enter path for domain/s$
+parser.add_argument('-list', '-l', required=True, help='Enter path for domain/subdomain list')
 #Can add additional args later - custom headers
 
 args = parser.parse_args()
