@@ -31,7 +31,7 @@ def statuscheck(url):
     try:
         response = requests.get(url.strip(), timeout=1)
         status = response.status_code
-        print ("Response ==> " + "[" + str(status) + "]" + " " + url.strip())
+        print ("Response ==> " + "[" + str(status) + "] " + url.strip())
         outfile = open(f"{status}.txt","a")
         outfile.write(url)
     except Exception:
