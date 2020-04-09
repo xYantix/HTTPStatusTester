@@ -9,7 +9,7 @@ print("""
 ╠═╣ ║  ║ ╠═╝╚═╗ │ ├─┤ │ │ │└─┐ ║ ├┤ └─┐ │ ├┤ ├┬┘
 ╩ ╩ ╩  ╩ ╩  ╚═╝ ┴ ┴ ┴ ┴ └─┘└─┘ ╩ └─┘└─┘ ┴ └─┘┴└─
 
-A Script to solve your Subdomain Recon Organization Porcess
+A Script to automate your Subdomain Recon Organization Process
 Author: @xYantix
 
 """)
