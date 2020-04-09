@@ -2,7 +2,18 @@ import os
 import requests
 import argparse
 import concurrent.futures
+print("\n")
+print("""
 
+╦ ╦╔╦╗╔╦╗╔═╗╔═╗┌┬┐┌─┐┌┬┐┬ ┬┌─┐╔╦╗┌─┐┌─┐┌┬┐┌─┐┬─┐
+╠═╣ ║  ║ ╠═╝╚═╗ │ ├─┤ │ │ │└─┐ ║ ├┤ └─┐ │ ├┤ ├┬┘
+╩ ╩ ╩  ╩ ╩  ╚═╝ ┴ ┴ ┴ ┴ └─┘└─┘ ╩ └─┘└─┘ ┴ └─┘┴└─
+
+A Script to solve your Subdomain Recon Organization Porcess
+Author: @xYantix
+
+""")
+print("\n")
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-list', '-l', required=True, help='Enter path for domain/subdomain list')
@@ -20,7 +31,7 @@ def statuscheck(url):
     try:
         response = requests.get(url.strip(), timeout=1)
         status = response.status_code
-        print ("Testing: " + url.strip())
+        print ("Response ==> " + "[" + str(status) + "] " + url.strip())
         outfile = open(f"{status}.txt","a")
         outfile.write(url)
     except Exception:
